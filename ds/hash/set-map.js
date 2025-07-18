@@ -80,13 +80,13 @@ class HashMap {
   constructor () {
     this.size = 0;
     this.capacity = 2;
-    this.map = Array(this.capacity).fill(null);
+    this.hMap = Array(this.capacity).fill(null);
   }
 
   print () {
-    for (let i = 0; i < this.map.length; i++) {
-      if (this.map[i]) {
-        console.log(`${this.map[i].key} ${this.map[i].value}`);
+    for (let i = 0; i < this.hMap.length; i++) {
+      if (this.hMap[i]) {
+        console.log(`${this.hMap[i].key} ${this.hMap[i].value}`);
       }
     }
   }
@@ -105,9 +105,9 @@ class HashMap {
   get (key) {
     let hIndex = hash(key);
 
-    while (this.map[hIndex] !== null) {
-      if (this.map[hIndex].key === key) {
-        return this.map[hIndex].val;
+    while (this.hMap[hIndex] !== null) {
+      if (this.hMap[hIndex].key === key) {
+        return this.hMap[hIndex].val;
       }
 
       hIndex++;
@@ -122,8 +122,8 @@ class HashMap {
     let hIndex = this.hash(key);
 
     while (true) {
-      if (this.map[hIndex] === null) {
-        this.map[hIndex] = new Pair(key, val);
+      if (this.hMap[hIndex] === null) {
+        this.hMap[hIndex] = new Pair(key, val);
         this.size++;
         
         if (this.size >= this.capacity / 2) {
@@ -131,8 +131,8 @@ class HashMap {
         }
         
         return;
-      } else if (this.map[hIndex].key === key) {
-        this.map[hIndex].val = val;
+      } else if (this.hMap[hIndex].key === key) {
+        this.hMap[hIndex].val = val;
                 
         return;
       }
@@ -144,39 +144,39 @@ class HashMap {
 
   rehash () {
     this.capacity = 2 * this.capacity;
-    let newMap = new Array(this.capacity).fill(null);
-    let oldMap = this.map;
-    this.map = newMap;
+    let newHMap = new Array(this.capacity).fill(null);
+    let oldHMap = this.hMap;
+    this.hMap = newHMap;
     this.size = 0;
 
-    for (let i = 0; i < oldMap.length; i++) {
-      if (oldMap[i]) {
-          this.put(oldMap[i].key, oldMap[i].val);
+    for (let i = 0; i < oldHMap.length; i++) {
+      if (oldHMap[i]) {
+          this.put(oldHMap[i].key, oldHMap[i].val);
       }
     }
   }
 
-    // remove(key) {
-    //     if (this.get(key) == null) {
-    //         return;
-    //     }
+  remove(key) {
+    if (this.get(key) === null) {
+      return;
+    }
         
-    //     let index = this.hash(key);
+    let hIndex = this.hash(key);
 
-    //     while (true) {
-    //         if (this.map[index].key === key) {
-    //             // Removing an element using open-addressing actually causes a bug,
-    //             // because we may create a hole in the list, and our get() may 
-    //             // stop searching early when it reaches this hole.
-    //             this.map[index] = null;
-    //             this.size -= 1;
-    //             return;
-    //         }
+    while (true) {
+      if (this.hMap[hIndex].key === key) {
+        // Removing an element using open-addressing actually causes a bug, because we may create a hole in the array,
+        // and our get() may get in trouble. 
+        this.hMap[hIndex] = null;
+        this.size--;
 
-    //         index += 1;
-    //         index = index % this.capacity;
-    //     }
-    // }
+        return;
+      }
+
+      hIndex++;
+      hIndex = hIndex % this.capacity;
+    }
+  }
 }
 
 // ====================================================================================================================
