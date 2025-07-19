@@ -20,3 +20,13 @@
 - Remove i-th element: O(1)
 - Shift or Insert Middle:  O(n) beacues we add a value at the first position of array and all other elenments should be shifted.
 - Unshift or Remove Middle: O(n)
+
+# Stack
+We can implement it using dynamic array.
+- one of common use case of dynamic array.
+- LIFO
+
+## Time Complexity
+- Push: O(1)
+- Pop: O(1)
+- Peek or Top: O(1)
