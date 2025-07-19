@@ -17,10 +17,9 @@
 // PROBLEM:
 const problem = ['alice', 'brad', 'collin', 'brad', 'dylan', 'kim'];
 
-// ====================================================================================================================
-
 // SAMPLE
 const countMap = {};
+
 function createHashMap (arr) {
   for (let i = 0; i < arr.length; i++) {
     if (countMap[arr[i]]) {
