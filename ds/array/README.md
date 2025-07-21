@@ -8,6 +8,11 @@
 - Shift or Insert Middle:  O(n) beacues we add a value at the first position of array and all other elenments should be shifted.
 - Unshift or Remove Middle: O(n)
 
+### Practice
+- [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | H
+- [Remove Element](https://leetcode.com/problems/remove-element/) | E
+- [Shuffle The Array](https://leetcode.com/problems/shuffle-the-array/) | M
+
 # Dynamic Array
 - When we push a new value to a dynamic array, it allocate new piece of memory with double size of original array to overcome the problem of sizing. Then we copy old array data to new array and after all, we free up the memory by removing the old array.
 - Why doubling the size? Creating a brand new array is O(n) and we want to reduce the cost of creating new arrays by adding new RAM space one by one. 
@@ -20,6 +25,9 @@
 - Remove i-th element: O(1)
 - Shift or Insert Middle:  O(n) beacues we add a value at the first position of array and all other elenments should be shifted.
 - Unshift or Remove Middle: O(n)
+
+### Practice
+- [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | E
 
 # Stack
 We can implement it using dynamic array.

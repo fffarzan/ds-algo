@@ -65,9 +65,3 @@ staticArray.insertEnd('d', 4).print(); // a b c d
 staticArray.removeEnd().print(); // a b c 0
 staticArray.insertMiddle(1, 'd').print(); // a d b c
 staticArray.removeMiddle(2).print(); // a d 0 c
-
-// PRACTICE: 
-//    https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-//    https://leetcode.com/problems/remove-element/
-//    https://leetcode.com/problems/shuffle-the-array/
-//    Visit https://neon.rip/

@@ -74,7 +74,3 @@ class DynamicArray {
 const dyanmicArr = new DynamicArray();
 dyanmicArr.insert(0, 'a').insert(1, 'b').insert(2, 'c').push('d').pop('d').print();
 dyanmicArr.get(2);
-
-// PRACTICE:
-//    https://leetcode.com/problems/concatenation-of-array/
-//    Visit https://neon.rip/
