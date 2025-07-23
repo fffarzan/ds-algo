@@ -38,3 +38,8 @@ We can implement it using dynamic array.
 - Push: O(1)
 - Pop: O(1)
 - Peek or Top: O(1)
+
+### Practice
+- [Baseball Game](https://leetcode.com/problems/baseball-game/) | E | Tested some aspects of performance
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | H
+- [Min Stack](https://leetcode.com/problems/min-stack/) | E
