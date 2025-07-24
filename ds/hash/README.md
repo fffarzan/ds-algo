@@ -14,7 +14,7 @@
 O(n).
 
 ### Practice
-- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | E
 - [Two Sum](https://leetcode.com/problems/two-sum/)
 - [Lru Cache](https://leetcode.com/problems/lru-cache/)
 
