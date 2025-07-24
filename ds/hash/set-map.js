@@ -1,19 +1,3 @@
-// HASH SET/MAP DATA STRUCTURE
-
-// DESCRIPTION:
-//    SET: Kind of set of values.
-//    MAP: A set of keys that mapped to different values.
-//    INSERT TIME COMPLEXITY: average: O(1) --> In general: O(logn).
-//    REMOVE TIME COMPLEXITY: average: O(1) --> In general: O(logn).
-//    SEARCH TIME COMPLEXITY: average: O(1) --> In general: O(logn).
-//    INORDER TRAVERSING TIME COMPLEXITY: average: O(nlogn).
-//    SPACE COMPLEXITY: O(n).
-//    Duplicates are mot allowed in hash map.
-//    Creating a hash map from an array would be O(n) but for a tree map it would be O(nlogn). Every operation like
-//      insert, remove and search takes logn for each value. Thus for array with n values, it takes nlogn time.
-
-// ====================================================================================================================
-
 // PROBLEM:
 const problem = ['alice', 'brad', 'collin', 'brad', 'dylan', 'kim'];
 
@@ -34,38 +18,6 @@ function createHashMap (arr) {
 createHashMap(problem);
 
 console.log('hash map:', countMap);
-
-// ====================================================================================================================
-
-// PRACTICE:
-//    https://leetcode.com/problems/contains-duplicate/
-//    https://leetcode.com/problems/two-sum/
-//    https://leetcode.com/problems/lru-cache/
-
-// ====================================================================================================================
-
-// DESCRIPTION
-//    Under the hood a hash map will implemented in an array: [index <--> key, value pair].
-//    Even empty hash maps have at least two elements in array.
-//    HASHING: 
-//      We have a hashing function that take the key and convert it to an integer. Then we use that integer as 
-//      index. That array is actually an array of object.
-//      To create the hash, we map every character of key to an integer (ASCII) and then sum up all of characters to 
-//      reach a final integer as hash.
-//      For setting the key inside the array with size of n, we use: (hash number % n). The reminder is a vaild
-//      index at the end.
-//    GET: For getting value of a key from a hash map, we get the key, convert it to its hash, go to the hash map in
-//      the specified size and find the value of target key.
-//    HASHING COLLISION: Happens when two keys has same integer or same reminders. That happens. We can just work 
-//      around them.
-//    REHASHING: The process of doubled size of array (after reaching half-full array) to prevent collision.
-//    We can use other methods to prevent collision in hashing like Linked List or Open Addressing but these ways are
-//    also have some downsides.
-//    We also use most nearest prime numbers when we want to double the size of array, for example we choose 7 instead 
-//    of 8. Or for double size of 7, we use 17 instead of 14. It's been proved by math that prime numbers are better
-//    in this case.
-
-// ====================================================================================================================
 
 // IMPLEMENTING A HASH
 class Pair {
@@ -177,9 +129,3 @@ class HashMap {
     }
   }
 }
-
-// ====================================================================================================================
-
-// PRACTICE:
-//    https://leetcode.com/problems/design-hashset/
-//    https://leetcode.com/problems/design-hashmap/
