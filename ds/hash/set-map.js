@@ -1,6 +1,9 @@
 // PROBLEM:
 const problem = ['alice', 'brad', 'collin', 'brad', 'dylan', 'kim'];
 
+
+
+
 // SAMPLE
 const countMap = {};
 
@@ -18,6 +21,9 @@ function createHashMap (arr) {
 createHashMap(problem);
 
 console.log('hash map:', countMap);
+
+
+
 
 // IMPLEMENTING A HASH
 class Pair {
@@ -54,7 +60,7 @@ class HashMap {
 
   // getting value of key
   get (key) {
-    let hIndex = hash(key);
+    let hIndex = this.hash(key);
 
     while (this.hMap[hIndex] !== null) {
       if (this.hMap[hIndex].key === key) {
@@ -129,3 +135,12 @@ class HashMap {
     }
   }
 }
+
+const hMap = new HashMap();
+hMap.put('a', 2);
+hMap.put('b', 5);
+hMap.put('c', 1);
+console.log(hMap);
+hMap.remove('b');
+console.log(hMap);
+console.log(hMap.get('a'));
