@@ -1,7 +1,8 @@
 // NOTE: It should be completed, the course solution is not.
 
 
-// FAST AND SLOW POINTER (Linked List) ALGORITHM
+// FAST & SLOW POINTERS ALGORITHM
+
 // Problem: Find the middle of a linked list
 // Description:
 //   Fast Pointer: Will be shifted by two spaces.
