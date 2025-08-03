@@ -51,4 +51,4 @@
 - O(c) => O(1). Because of array hash we create for different elements.
 
 ### Practice
-- [sort colors](https://leetcode.com/problems/sort-colors/)
+- [sort colors](https://leetcode.com/problems/sort-colors/) | E
