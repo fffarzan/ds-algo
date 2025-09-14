@@ -24,5 +24,5 @@
 
 ### Practice
 
-- [search in a binary search tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
+- [search in a binary search tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | E
 - [lowest common ancestor of a binary search tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
