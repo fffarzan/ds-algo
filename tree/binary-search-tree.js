@@ -14,6 +14,7 @@ class BinarySearchTree {
   insert(val) {
     let newNode = new TreeNode(val);
 
+    // create the root node
     if (this.root === null) {
       this.root = newNode;
 
@@ -24,6 +25,7 @@ class BinarySearchTree {
   }
 
   insertNode(node, newNode) {
+    // trace the left side of the tree
     if (newNode.val < node.val) {
       if (node.left === null) {
         node.left = newNode;
@@ -36,6 +38,7 @@ class BinarySearchTree {
       return;
     }
 
+    // trace the right side of the tree
     if (node.right === null) {
       node.right = newNode;
 
