@@ -26,3 +26,5 @@ console.log("binary tree:", root);
 //     5   15
 //   /  \
 //  3   7
+
+module.exports = root;

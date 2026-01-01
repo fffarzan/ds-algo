@@ -19,10 +19,49 @@
 ## Time Complexity
 
 - If the tree is not balanced: O(n) -> it's like a simple array.
-- If the tee is balanced: O(logn).
+- If the tree is balanced: O(logn).
 - Some people say O(h) (h is the height of the tree).
 
 ### Practice
 
 - [search in a binary search tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | E
 - [lowest common ancestor of a binary search tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+# Depth-First Search (DFS)
+
+- for search we go deep as we can in DFS.
+- We need `HashSet` for this search algorithm.
+
+```js
+const output = ["A", "B", "C", "D", "E"];
+
+//        A
+//      /  \
+//     B   E
+//   /  \
+//  C    D
+```
+
+## Time Complexity
+
+- O(n) (n is number of nodes)
+
+# Breadth-First Search (BFS)
+
+- It goes to every node that is close to (traverse the tree layer by layer).
+- It can be applied to any tree, sorted or not.
+- We need `Queue` data structure for this search algorithm (beacuse of the FIFO behavior).
+
+```js
+const output = ["A", "B", "E", "C", "D"];
+
+//        A
+//      /  \
+//     B   E
+//   /  \
+//  C    D
+```
+
+## Time Complexity
+
+- O(n) (n is number of nodes)
