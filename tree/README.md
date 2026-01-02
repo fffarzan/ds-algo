@@ -37,8 +37,6 @@
 - Postorder Traversal: Prints all the values on the left subtree, then all the values on the right sbutree and finally prints the root.
 
 ```js
-const output = ["A", "B", "C", "D", "E"];
-
 //           15
 //        /     \
 //      10       25
