@@ -58,11 +58,11 @@ const postorderTraversalOutput = [5, 9, 7, 13, 10, 17, 22, 27, 25, 15];
 
 ### Practices
 
-# Breadth-First Search (BFS)
-
 - [binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 - [kth smallest element in a bst](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 - [construct binary tree from preorder and inorder traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+# Breadth-First Search (BFS)
 
 - It goes to every node that is close to (traverse the tree layer by layer).
 - It can be applied to any tree, sorted or not.
