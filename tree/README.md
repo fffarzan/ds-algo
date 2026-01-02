@@ -65,3 +65,8 @@ const output = ["A", "B", "E", "C", "D"];
 ## Time Complexity
 
 - O(n) (n is number of nodes)
+
+### Practice
+
+- [binary tree level order traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- [binary tree right side view](https://leetcode.com/problems/binary-tree-right-side-view/)

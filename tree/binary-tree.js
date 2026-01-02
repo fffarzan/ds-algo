@@ -1,5 +1,4 @@
-// Creating a binary tree
-
+// Binary Tree Sample
 class Node {
   constructor(val) {
     this.val = val;
@@ -19,12 +18,15 @@ root.right = node15;
 node5.left = node3;
 node5.right = node7;
 
+console.log("===============================================================");
 console.log("binary tree:", root);
-
-//       10
-//      /  \
-//     5   15
-//   /  \
-//  3   7
+console.log(`
+       10           \n
+      /  \\         \n
+     5   15         \n
+   /  \\            \n
+  3    7            \n
+`);
+console.log("===============================================================");
 
 module.exports = root;
