@@ -87,4 +87,20 @@ BST.insert(5);
 BST.insert(9);
 BST.insert(27);
 
-console.log(BST.search(8));
+console.log("===============================================================");
+console.log("BST:", BST.root);
+console.log(`
+           15
+        /     \\
+      10       25
+     /  \\     /  \\
+    7   13   22   27
+   / \\      /
+  5   9    17
+`);
+console.log("===============================================================");
+console.log("is 25 exists:", BST.search(25));
+console.log("is 8 exists:", BST.search(8));
+console.log("===============================================================");
+
+module.exports = BST.root;
