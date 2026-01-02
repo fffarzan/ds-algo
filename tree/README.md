@@ -84,3 +84,37 @@ const output = ["A", "B", "E", "C", "D"];
 
 - [binary tree level order traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [binary tree right side view](https://leetcode.com/problems/binary-tree-right-side-view/)
+
+# Trie (Prefix Tree)
+
+It is used for strings, not other types of values. We can create a string as a tree:
+
+```js
+const apple = "apple";
+console.log(`
+        ''
+       /
+      a
+        \\
+         p
+          \\
+           p
+          /
+         l
+        /
+       e
+`);
+```
+
+## Time Complexity
+
+- Insert word: O(1)
+- Search word: O(1)
+- Search prefix: O(1)
+
+### Practices
+
+- [implement trie prefix tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [design add and search words data structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+- [word search ii](https://leetcode.com/problems/word-search-ii/)
+- [prefix and suffix search](https://leetcode.com/problems/prefix-and-suffix-search/)
