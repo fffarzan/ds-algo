@@ -87,23 +87,24 @@ const output = ["A", "B", "E", "C", "D"];
 
 # Trie (Prefix Tree)
 
-It is used for strings, not other types of values. We can create a string as a tree:
+- It is used for strings, not other types of values.
+- It's a type of DFS.
+- We can create a string as a tree:
 
 ```js
 const apple = "apple";
-console.log(`
-        ''
-       /
-      a
-        \\
-         p
-          \\
-           p
-          /
-         l
-        /
-       e
-`);
+
+//    ''
+//   /
+//  a
+//    \\
+//     p
+//      \\
+//       p
+//      /
+//     l
+//    /
+//   e
 ```
 
 ## Time Complexity
@@ -114,7 +115,78 @@ console.log(`
 
 ### Practices
 
-- [implement trie prefix tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [design add and search words data structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+- [implement trie prefix tree](https://leetcode.com/problems/implement-trie-prefix-tree/) | E
+- [design add and search words data structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | M
 - [word search ii](https://leetcode.com/problems/word-search-ii/)
 - [prefix and suffix search](https://leetcode.com/problems/prefix-and-suffix-search/)
+
+# Union-Find (Disjoint sets)
+
+- It's a kind of tree but mostly applied to generic graphs
+- It means with this algorithm we can find how many disjoint sets (connected components) exists in a graph.
+- It also is used for cycle detection. Usually DFS can accomplish this duty in the same time complexity, but sometimes union-find is more efficient.
+- Union-find is a Forest of Trees (means we have a bunch of trees). We have a tree for every single disjoint set.
+- Union by Rank (height): The operation that allows us to just go up as less as possible from target node. We don't like to create linked list (or imbalanced tree) traversing many nodes to the root node. We take the smaller tree and add it as a child of the larger tree.
+- Union-find doesn't necessarily represent the accurate graph!
+- Example: For `[1, 2]`, the parents of both nodes are themselves, so we can choose one of the nodes as the parent for another. We choosed 1. For `[2, 4]` the parent for 2 is 1 right now and the parent for 4 is itself. We can put 4 as the parent here but we prefer to prevent creating a linked-list like tree (with less perfomant find operation. We need a balance tree for efficient find) and put the 1 as the parent for both 2 and 4 nodes. At the end, for `[4, 1]` the parent for 4 is 1 and the parent for 1 is itself. So the parent is similar and we won't do any thing.
+
+```js
+const nodes = [1, 2, 3, 4];
+const edges = [
+  [1, 2],
+  [4, 1],
+  [2, 4],
+];
+// before:
+//  1    2    3    4
+
+// after:
+//      1           3
+//     / \\
+//    2  4
+```
+
+## Time Complexity
+
+- O(1) for union
+- O(logn) for find
+
+### Practices
+
+- [redundant connection](https://leetcode.com/problems/redundant-connection/)
+- [accounts merge](https://leetcode.com/problems/accounts-merge/)
+- [longest consecutive sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+- [number of connected components in an undirected graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+
+# Iterative DFS
+
+- Inorder: Instead of recursion, we can use "stack". Af first, we create a stack based on going down in the left side. We push 1, then 2, then 4. When we arrived to null, we pop the values till make the stack empty. We pop 4, 2 and 1. After that, we start to traverse the right side. We push 3 to the stack but becaue the left side of the 3 is null, we pop it immediatelly from the stack and do this this end of the right side.
+
+```js
+//        1
+//      /  \
+//     2   3
+//    /     \
+//   4      5
+
+const stack = [Node(1), Node(2), Node(4), Node(3), Node(5)];
+const result = [4, 2, 1, 3, 5];
+```
+
+## Time Complexity
+
+- Inorder: O(n)
+- Preorder: O(n)
+- Postorder: O(n)
+
+## Space Complexity
+
+- Inorder: O(n)
+- Preorder: O(n)
+- Postorder: O(n)
+
+### Practices
+
+- [binary search tree iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+- [binary tree preorder traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+- [binary tree postorder traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)
