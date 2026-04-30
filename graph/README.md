@@ -40,8 +40,8 @@ const grid = [
   [0, 0, 0, 1],
   [0, 1, 0, 0],
 ];
-const adjMatrix[v1][v2] = 1 // an edge exists from v1 rto v2
-const adjMatrix[v2][v1] = 1 // an edge exists from v2 rto v1
+const adjMatrix[v1][v2] = 1 // an edge exists from v1 to v2
+const adjMatrix[v2][v1] = 1 // an edge exists from v2 to v1
 
 // the graph based on above matrix:
 //           ___
