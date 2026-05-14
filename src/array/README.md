@@ -1,14 +1,12 @@
-# Static Array
-
-- Other name: Fixed size arrays.
+# Static (Fixed Size) Array
 
 ## Time Complexity
 
 - Read i-th element: O(1)
 - Write i-th element: O(1)
 - Remove i-th element: O(1)
-- Shift or Insert Middle: O(n) beacues we add a value at the first position of array and all other elenments should be shifted.
-- Unshift or Remove Middle: O(n)
+- Shift or Insert Middle: O(n) --> Beacues we add a value at the first position of array and all other elenments should be shifted.
+- Unshift or Remove Middle: O(n) --> Same as Shift.
 
 ### Practice
 
