@@ -6,7 +6,7 @@ A consecutive sequence is a sequence of elements in which each element is exactl
 
 # Description
 
-![Figure]()
+![Figure](./assets/imgs/longest-consecutive.png)
 
 # Refs
 
