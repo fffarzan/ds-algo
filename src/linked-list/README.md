@@ -92,3 +92,12 @@ tail = tmp;
 | Insert or remove at the middle | O(n)    | O(1) if we know the node / O(n) |
 
 
+# Fast & Slow Pointers (Floyd's Tortoise & Hare)
+
+Q: Find the middle of a linked list
+
+- Fast: It will be shifted by two spaces.
+- Slow: It will be shifted by one space.
+- We keep moving the pointers untill one of them reaches the end of the linked list.
+- 
+
