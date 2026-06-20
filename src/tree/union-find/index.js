@@ -16,7 +16,7 @@ class UnionFind {
       // path compression to make node closer to the parent
       this.parent.set(
         currentParent,
-        this.parent.get(this.parent.get(currentParent))
+        this.parent.get(this.parent.get(currentParent)),
       );
       currentParent = this.parent.get(currentParent);
     }
